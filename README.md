@@ -49,8 +49,8 @@ To do the actual linting, run:
 npm run lint
 ```
 
-### Tests suite
-To do the actual tests suite, please run:
+### To execute the tests suite
+To execute the tests suite, please run:
 
 ```
 npm run test
