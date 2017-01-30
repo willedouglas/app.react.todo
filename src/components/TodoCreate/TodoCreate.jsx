@@ -84,5 +84,5 @@ export default class TodosCreate extends React.Component {
 
 TodosCreate.propTypes = {
 	createTask: React.PropTypes.func,
-	todos: React.PropTypes.object
+	todos: React.PropTypes.array
 };

@@ -19,5 +19,5 @@ export default class TodosList extends React.Component {
 }
 
 TodosList.propTypes = {
-	todos: React.PropTypes.object
+	todos: React.PropTypes.array
 };
