@@ -4,7 +4,7 @@ import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 
-export default class TodosList extends React.Component {
+export default class TodosCreate extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -81,3 +81,8 @@ export default class TodosList extends React.Component {
 		}
 	}
 }
+
+TodosCreate.propTypes = {
+	createTask: React.PropTypes.func,
+	todos: React.PropTypes.object
+};

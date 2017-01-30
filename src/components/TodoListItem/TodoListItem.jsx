@@ -96,3 +96,11 @@ export default class TodosListItem extends React.Component {
 		this.setState({isEditing: false});
 	}
 }
+
+TodosListItem.propTypes = {
+	task: React.PropTypes.object,
+	isCompleted: React.PropTypes.bool,
+	toggleTask: React.PropTypes.func,
+	deleteTask: React.PropTypes.func,
+	saveTask: React.PropTypes.func
+};
