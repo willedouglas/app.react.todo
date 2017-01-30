@@ -5,7 +5,7 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 
-require('./TodoListItem.scss');
+require("./TodoListItem.scss");
 
 export default class TodosListItem extends React.Component {
 	constructor(props) {
@@ -38,7 +38,8 @@ export default class TodosListItem extends React.Component {
 
 		return (
 			<div className="containerTasks">
-				<Checkbox validationState={this.getValidationState(isCompleted)} checked={isCompleted} onChange={this.props.toggleTask.bind(this, task)}>{task}</Checkbox>
+				<Checkbox validationState={this.getValidationState(isCompleted)} checked={isCompleted}
+									onChange={this.props.toggleTask.bind(this, task)}>{task}</Checkbox>
 			</div>
 		);
 	}
@@ -56,7 +57,8 @@ export default class TodosListItem extends React.Component {
 		return (
 			<div className="containerActionButtons">
 				<Button bsSize="large" onClick={this.onEditClick.bind(this)}><Glyphicon glyph="pencil"/></Button>
-				<Button bsSize="large" onClick={this.props.deleteTask.bind(this, this.props.task)}><Glyphicon glyph="remove"/></Button>
+				<Button bsSize="large" onClick={this.props.deleteTask.bind(this, this.props.task)}><Glyphicon
+					glyph="remove"/></Button>
 			</div>
 		);
 	}

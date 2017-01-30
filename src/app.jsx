@@ -27,7 +27,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div className="containerTodoList">
-				<CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+				<CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
 				<AlertDismissable />
 				<TodosList
 					todos={this.state.todos}
@@ -42,7 +42,7 @@ export default class App extends React.Component {
 	toggleTask(task) {
 		const foundTodo = _.find(this.state.todos, todo => todo.task === task);
 		foundTodo.isCompleted = !foundTodo.isCompleted;
-		this.setState({ todos: this.state.todos });
+		this.setState({todos: this.state.todos});
 	}
 
 	createTask(task) {
@@ -50,17 +50,17 @@ export default class App extends React.Component {
 			task,
 			isCompleted: false
 		});
-		this.setState({ todos: this.state.todos });
+		this.setState({todos: this.state.todos});
 	}
 
 	saveTask(oldTask, newTask) {
 		const foundTodo = _.find(this.state.todos, todo => todo.task === oldTask);
 		foundTodo.task = newTask;
-		this.setState({ todos: this.state.todos });
+		this.setState({todos: this.state.todos});
 	}
 
 	deleteTask(taskToDelete) {
 		_.remove(this.state.todos, todo => todo.task === taskToDelete);
-		this.setState({ todos: this.state.todos });
+		this.setState({todos: this.state.todos});
 	}
 }
