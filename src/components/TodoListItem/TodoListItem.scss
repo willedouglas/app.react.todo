@@ -1,0 +1,23 @@
+.containerTodoList .containerItems .containerItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  height: 60px;
+}
+
+.containerTodoList .containerItems .containerItem .containerActionButtons, .containerTodoList .containerItems .containerItem .containerEditButtons {
+  margin-left: auto;
+}
+
+.containerTodoList .containerItems .containerItem .containerTasks {
+  overflow: hidden;
+  width: 50%;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.containerTodoList .containerItems .containerItem button {
+  margin-right: 10px;
+}
+
