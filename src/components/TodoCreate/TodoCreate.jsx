@@ -16,14 +16,6 @@ export default class TodosCreate extends React.Component {
 		this.handleChange = this.handleChange.bind(this);
 	}
 
-	renderHelpBlock() {
-		if (!this.state.error) {
-			return <HelpBlock >Press enter to add a new task.</HelpBlock>;
-		}
-
-		return <HelpBlock>{this.state.error}</HelpBlock>;
-	}
-
 	render() {
 		return (
 			<form onSubmit={this.handleCreate.bind(this)}>
@@ -32,7 +24,7 @@ export default class TodosCreate extends React.Component {
 						this.createInput = input;
 					}} onChange={this.handleChange}/>
 					<FormControl.Feedback />
-					{this.renderHelpBlock()}
+					<HelpBlock>{this.helpBlockText()} </HelpBlock>
 				</FormGroup>
 			</form>
 		);
@@ -57,6 +49,14 @@ export default class TodosCreate extends React.Component {
 		this.genericSetState({error: null});
 		this.props.createTask(task);
 		this.genericSetState({value: ''});
+	}
+
+	helpBlockText() {
+		if (!this.state.error) {
+			return 'Press enter to add a new task.';
+		}
+
+		return this.state.error;
 	}
 
 	getValidationState() {
