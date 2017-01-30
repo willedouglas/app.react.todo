@@ -5,8 +5,6 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 
-require("./TodoListItem.scss");
-
 export default class TodosListItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -15,8 +13,6 @@ export default class TodosListItem extends React.Component {
 			isEditing: false,
 			task: null
 		};
-
-		this.handleChange = this.handleChange.bind(this);
 	}
 
 	renderTaskSection() {
@@ -29,7 +25,7 @@ export default class TodosListItem extends React.Component {
 						<FormGroup bsSize="large" className="formEditTask">
 							<FormControl type="text" value={this.state.task !== null ? this.state.task : task} ref={(input) => {
 								this.editInput = input;
-							}} onChange={this.handleChange}/>
+							}} onChange={this.handleChange.bind(this)}/>
 						</FormGroup>
 					</form>
 				</div>
