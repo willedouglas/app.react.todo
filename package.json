@@ -1,7 +1,10 @@
 {
-  "name": "react-webpack-babel",
+  "name": "app.react.todo",
   "version": "0.0.3",
-  "description": "React Webpack Babel Starter Kit",
+  "description": "Simple TodoList in React",
+  "engines": {
+    "node": "4.4.5"
+  },
   "main": "''",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
