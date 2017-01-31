@@ -1,3 +1,5 @@
+/* global it, describe, expect */
+
 import React from 'react';
 import {mount} from 'enzyme';
 import TodosCreate from '../../../components/TodoCreate/TodoCreate';
