@@ -53,5 +53,5 @@ npm run lint
 To execute the tests suite, please run:
 
 ```
-npm run test
+npm run test <path/file>
 ```
