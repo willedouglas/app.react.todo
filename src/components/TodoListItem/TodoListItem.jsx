@@ -96,7 +96,7 @@ export default class TodosListItem extends React.Component {
 }
 
 TodosListItem.propTypes = {
-	task: React.PropTypes.object,
+	task: React.PropTypes.string,
 	isCompleted: React.PropTypes.bool,
 	toggleTask: React.PropTypes.func,
 	deleteTask: React.PropTypes.func,
